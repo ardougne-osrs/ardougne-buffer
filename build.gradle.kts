@@ -34,4 +34,10 @@ publishing {
             }
         }
     }
+    publications {
+        register<MavenPublication>("default") {
+            from(components["java"])
+            from(components["kotlin"])
+        }
+    }
 }
